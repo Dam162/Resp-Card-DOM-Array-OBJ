@@ -59,7 +59,7 @@ body::before{
   transition: all 0.4s ease;
 }
 .main-card .cards .card:hover{
-  transform: translateY(-15px);
+  transform: translateY(-18px);
 }
 .cards .card .content{
   width: 100%;
@@ -129,6 +129,7 @@ body::before{
   color: #FF676D;
   background-color: #fff;
   border-color: #FF676D;
+  transform: translateY(+6px);
 }
  .container .button{
   width: 100%;

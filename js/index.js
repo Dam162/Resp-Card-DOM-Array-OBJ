@@ -9,7 +9,7 @@ var cardData = [
         jobDescription: "A web designer creates visually appealing and user-friendly websites, focusing on layout, graphics, typography, and overall aesthetics, ensuring a positive user experience. They collaborate with clients and developers to translate ideas into functional and engaging online experiences. "
     },
     userTwo = {
-        isVerrified: false,
+        isVerrified: true,
         profileURL: "./images/beautiful-young.jpeg",
         profileName: "Jasmine Carter",
         jobTitle: "UI Designer",
@@ -83,7 +83,7 @@ for (i = 0; i < 2; i++) {
         imgDiv.appendChild(img);
         img.setAttribute("alt", "image");
         if (cardData[i + j * 2].profileURL === "") {
-            img.setAttribute("src", "./images/download.png")
+            img.setAttribute("src", "./images/user.png")
         } else {
             img.setAttribute("src", cardData[i + j * 2].profileURL);
         }
