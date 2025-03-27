@@ -3,6 +3,7 @@ var container = document.getElementById("container");
 var cardData = [
     userOne = {
         isVerrified: true,
+        colors: "#D1E9F6",
         profileURL: "./images/businessman.jpg",
         profileName: "Andrew Neil",
         jobTitle: "Web Designer",
@@ -10,6 +11,7 @@ var cardData = [
     },
     userTwo = {
         isVerrified: true,
+        colors: "#F6EACB",
         profileURL: "./images/beautiful-young.jpeg",
         profileName: "Jasmine Carter",
         jobTitle: "UI Designer",
@@ -17,6 +19,7 @@ var cardData = [
     },
     userThree = {
         isVerrified: true,
+        colors: "#EECAD5",
         profileURL: "./images/handsome.jpg",
         profileName: "Justin Chung",
         jobTitle: "Graphic Designer",
@@ -24,6 +27,7 @@ var cardData = [
     },
     userFour = {
         isVerrified: true,
+        colors: "#F1D3CE",
         profileURL: "./images/high-angle.avif",
         profileName: "Appolo Reef",
         jobTitle: "Video Editor",
@@ -31,6 +35,7 @@ var cardData = [
     },
     userFive = {
         isVerrified: true,
+        colors: "#BFBBA9",
         profileURL: "./images/portrait.webp",
         profileName: "Adrina Calvo",
         jobTitle: ".Net Developer",
@@ -38,6 +43,7 @@ var cardData = [
     },
     userSix = {
         isVerrified: true,
+        colors: "#EAEAEA",
         profileURL: "./images/young-male-.avif",
         profileName: "Nicole Lewis",
         jobTitle: "Wordpress Developer",
@@ -75,6 +81,7 @@ for (i = 0; i < 2; i++) {
         card.appendChild(content);
         content.setAttribute("class", "content");
 
+
         var imgDiv = document.createElement("div");
         content.appendChild(imgDiv);
         imgDiv.setAttribute("class", "img");
@@ -106,9 +113,13 @@ for (i = 0; i < 2; i++) {
         uname.setAttribute("class", "name");
         if (cardData[i + j * 2].profileName === "") {
             uname.innerHTML = "Username";
-        } else {
+            uname.style.backgroundColor = "red";
+        } else if (cardData[i + j * 2].colors === "") {
+            uname.style.backgroundColor = "red";
             uname.innerHTML = cardData[i + j * 2].profileName;
-
+        }else {
+            uname.innerHTML = cardData[i + j * 2].profileName;
+            uname.style.backgroundColor = cardData[i + j * 2].colors;
         }
 
         var job = document.createElement("div");
